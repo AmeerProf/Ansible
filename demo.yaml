@@ -1,9 +1,9 @@
 ---
   - name: demo example
-    hosts: localhosts
+    hosts: localhost
     become: yes
     tasks:
     - name: task1 data
       ansible.builtin.dnf:
         name: httpd
-        state: lates
+        state: latest
