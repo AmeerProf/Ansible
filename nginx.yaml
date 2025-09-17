@@ -1,0 +1,13 @@
+- name: nginx example
+  hosts: Dev
+  become: yes
+  tasks:
+  - name: ng-task1
+    ansible.builtin.package:
+      name: nginx
+      state: latest
+
+  - name: ng-start
+    ansible.builtin.servic:
+      name: nginx
+      state: started
